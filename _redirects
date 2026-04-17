@@ -1,0 +1,3 @@
+/youtube.com/embed/:videoId  /?v=:videoId  302
+/watch                        /            302
+/*                            /index.html  200

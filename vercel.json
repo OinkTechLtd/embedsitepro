@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    {
+      "source": "/youtube.com/embed/:videoId",
+      "destination": "/?v=:videoId"
+    },
+    {
+      "source": "/watch",
+      "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "no-referrer-when-downgrade" }
+      ]
+    }
+  ]
+}

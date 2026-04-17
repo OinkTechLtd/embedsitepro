@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProxyDPI</title>
+  <script>
+    // Перехватываем /youtube.com/embed/ID
+    const path = window.location.pathname;
+    const match = path.match(/\/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/);
+    if (match) {
+      window.location.replace('/?v=' + match[1]);
+    } else {
+      window.location.replace('/');
+    }
+  </script>
+</head>
+<body></body>
+</html>
